@@ -2,11 +2,11 @@ const LogicLaserMessageFactory = require("./LogicLaserMessageFactory");
 const ClientHelloMessage = require("./Messages/Client/ClientHelloMessage");
 const LoginMessage = require("./Messages/Client/LoginMessage");
 const PepperCrypto = require("../Crypto/PepperCrypto");
+const fs = require("fs");
 let messages = {}
 
-let fs;
+
 if (dump) {
-    fs = require("fs");
     if (!fs.existsSync("./PacketsDumps")) {
         fs.mkdirSync("./PacketsDumps");
     }
